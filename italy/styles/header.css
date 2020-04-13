@@ -1,0 +1,79 @@
+.header {
+    background-image: url("../img/coloseum.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header__panel {
+    animation: showHeader 3s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+    background-color: rgba(168, 135, 100, 0.349);
+    background-position: center;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin: 0 auto;
+    opacity: 0;
+    padding: 5vh 0;
+    text-align: center;
+    text-shadow: 0 0 50px black;
+    width: 75%;
+}
+
+.header__panel h1 {
+    animation: showHeader 3s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+    font-size: 6rem;
+    letter-spacing: 4rem;
+    margin-right: -4rem;
+    opacity: 0;
+    text-transform: uppercase;
+}
+    
+.header__panel h5 {
+    animation: showHeader 3s;
+	animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes showHeader {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+@media (max-width: 925px) {
+    .header__panel {
+        width: 90vw;
+
+    }
+
+    .header__panel h1 {
+        font-size: 15vw;
+        letter-spacing: 7vw;
+        margin-right: -7vw;
+    }
+
+    .header__panel h5 {
+        font-size: 4vw;
+        letter-spacing: 2vw;
+        margin-right: -2vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__panel,
+    .header__panel h1,
+    .header__panel h5 {
+        animation: none;
+        opacity: 1;
+    }
+}
+

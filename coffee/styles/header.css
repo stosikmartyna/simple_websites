@@ -1,0 +1,85 @@
+.header {
+    background-attachment: fixed;
+    background-image: url("../img/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.header__text {
+    background-color: rgba(0, 0, 0, 0.247);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin: auto;
+    padding: 3.5rem;
+    width: 70%;
+}
+
+.header__text h1 {
+    font-size: 2.2rem;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 16px black;
+}
+
+.header__text span {
+    letter-spacing: .2rem;
+    line-height: 1.5;
+    text-shadow: 0 0 6px black;
+}
+
+.header__subscribe {
+    background-color: rgba(0, 0, 0, 0.473);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.header__subscribe h3 {
+    font-weight: initial;
+    margin-bottom: 1rem;
+}
+
+.header__subscribe__form input {
+    background-color:white;
+    border: 1px solid #855037;
+    border-radius: 4px;
+    color:#623B28;
+    height: 5vh;
+    padding: 0 1rem;
+    width: 25%;
+}
+
+.header__subscribe__form button {
+    background-color: #855037;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: .5rem;
+}
+
+.header__subscribe__form button:hover {
+    background-color: white;
+    border: 1px solid #855037;
+    color: #855037;
+}
+
+@media (max-width: 530px) {
+    .header {
+        height: 100vh;
+    }
+
+    .header__text {
+        border: none;
+    }
+}

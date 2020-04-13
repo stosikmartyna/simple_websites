@@ -1,0 +1,85 @@
+.nav {
+    animation: showNav 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    background: rgba(255, 255, 255, 0.877);
+    display: flex;
+    height: 20px;
+    justify-content: space-evenly;
+    padding: 1.3rem 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: -65px;
+    width: 100%;
+}
+
+.nav a {
+    animation: showNavLinks 1s;
+    animation-fill-mode: forwards;
+    color: rgb(167, 122, 74);
+    font-weight: 500;
+    letter-spacing: .3rem;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    border-bottom: 1px solid rgb(167, 122, 74);
+}
+
+.nav :nth-child(1) {animation-delay: 5s}
+.nav :nth-child(2) {animation-delay: 5.2s}
+.nav :nth-child(3) {animation-delay: 5.4s}
+.nav :nth-child(4) {animation-delay: 5.6s}
+
+
+label, input {
+    display: none;
+}
+
+@keyframes showNavLinks {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes showNav {
+    0% {top: -65px}
+    100% {top: 0}
+}
+
+@media (max-width: 550px) {
+    .nav {
+        animation: none;
+        background: rgba(255, 255, 255, 0.95);
+        display: block;
+        height: 100vh;
+        left: -100vw;
+        padding-top: 80px;
+        position: fixed;
+        top: 0;
+        transition: left 1s ease-in-out;
+        width: 250px;
+    }
+
+    .nav a {
+        animation: none;
+        border-bottom: 1px solid rgba(167, 122, 74, 0.2);
+        display: block;
+        opacity: 1;
+        padding: 2rem 3rem;
+        z-index: 2;
+    }
+
+    label {
+        color: rgb(167, 122, 74);
+        display: flex;;
+        font-size: 4rem;
+        padding: 1rem 2rem;
+        position: fixed;
+        z-index: 1;
+    }
+
+    #toggle:checked ~ .nav {
+        left: 0;
+    }
+}

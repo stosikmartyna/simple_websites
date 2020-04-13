@@ -1,0 +1,83 @@
+.navbar {
+    background-color: rgb(98, 59, 40);
+    border-bottom: #855037 3px solid;
+    color: white;
+    display: flex;
+    min-height: 10vh;
+    width: 100%;
+}
+
+.navbar * {
+    margin: auto;
+}
+
+.navbar__header {
+    letter-spacing: .1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__header img {
+    height: 3rem;
+    margin-right: .5rem;
+    width: auto;
+}
+
+.navbar__header span {
+    color: rgb(219, 193, 152);
+}
+
+.navbar__links li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.navbar__links a {
+    color: white;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar__links a:hover {
+    color: rgb(219, 193, 152);
+}
+
+#nav-toggle-checkbox, #nav-toggle-label {
+    display: none;
+}
+
+
+@media (max-width: 550px) {
+    .navbar {
+        display: block;
+        height: 100vh;
+        left: -250px;
+        padding-top: 100px;
+        position: fixed;
+        transition: left 1s ease-in-out;
+        width: 250px;
+    }
+
+    .navbar__links a {
+        border-bottom: 1px solid #fff;
+        display: block;
+        padding: 2rem 3rem;
+    }
+
+    #nav-toggle-label {
+        color: rgb(167, 122, 74);
+        display: flex;
+        font-size: 4rem;
+        position: fixed;
+        left: 30px;
+        top: 20px;
+        z-index: 2;
+    }
+
+    #nav-toggle-checkbox:checked ~ .navbar {
+        left: 0px;
+    }
+
+
+}
